@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.content {
+    margin-inline: auto;
+    max-width: 375px;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    text-align: center;
+    padding-bottom: 5.5rem;
+}
+
+.header-logo {
+    padding: 2rem
+}
+
+.hero-mobile {
+    margin-bottom: 4rem;
+}
+
+.hero-desktop{
+    display:none;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+}
+
+
+h1>span {
+    display: block;
+    letter-spacing: 1rem;
+    margin-block: 0.5rem;
+}
+
+h1>span:first-child {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+.hero-section > p {
+    font-size: 14px;
+    line-height: 1rem;
+    color: var(--desaturated-red);
+    margin-bottom: 2rem;
+    padding-inline: 2rem;
+}
+
+
+.email-section {
+    padding-inline: 2rem;
+}
+
+.input-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    font: inherit;
+    font-size: 14px;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--desaturated-red);
+    border-radius: 1.5rem;
+    flex: 1;
+    background: inherit;
+    color: var(--desaturated-red);
+    outline: none;
+    height: 48px;
+}
+
+::placeholder {
+    color: inherit;
+}
+
+button {
+    padding: 14px 1.75rem;
+    border-width: 0;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 1.5rem;
+    transform: translateX(-100%);
+    margin-right: -68px;
+}
+
+button:hover{
+    box-shadow: 1px 1px 4px var(--desaturated-red) ;
+}
+
+.errorMsg{
+    color: var(--soft-red);
+    font-size: 14px;
+    position: absolute;
+}
+
+.errorInputIndicator{
+    border:2px solid var(--soft-red);
+}
+
+.error-icon{
+    transform: translateX(-300%);
+}
+
+.hide{
+    display: none;
+}
+
+@media (min-width:1440px){
+
+    .header-logo{
+        margin-top:4rem;
+        padding: 0;
+    }
+
+    .content{
+        margin-inline: 0;
+        max-width: 830px;
+        padding:0 13.5rem 0 10rem;
+        text-align: left;
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        background-image: url('../images/bg-pattern-desktop.svg');
+    }
+
+    .hero-mobile{
+        display: none;
+    }
+
+    .hero-desktop{
+        display: block;
+        width: 603px;
+    }
+
+    h1{
+        margin: 8.5rem 0 2.5rem 0;
+        font-size: 3.25rem;
+    }
+
+    h1>span{
+        margin-block:1rem
+    }
+
+    .hero-section > p{
+        padding: 0;
+        margin-bottom: 3rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .email-section{
+        padding: 0;
+    }
+
+    form{
+        margin-bottom: 10.125rem;
+    }
+
+    input{
+        font-size: 1rem;
+    }
+
+}
